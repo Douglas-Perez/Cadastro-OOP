@@ -20,5 +20,10 @@ namespace Cadastro_OOP
             Curso = curso;
             Matricula = matricula;
         }
+
+        public string Informacoes()
+        {
+            return $"Nome: {Nome}\nE-mail: {Email}\nCurso: {Curso}\nNúmero da Matrícula: {Matricula}";
+        }
     }
 }
