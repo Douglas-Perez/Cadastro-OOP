@@ -7,9 +7,10 @@
             Terminal terminal = new();
             int matricula = 0;
             List<Aluno> alunos = new();
-                Console.WriteLine("Bem vindo ao nosso sistema de cadastro!\nO que gostaria de fazer?\n");
+                Console.WriteLine("Bem vindo ao nosso sistema de cadastro!");
             while (true)
             {
+                Console.WriteLine("O que gostaria de fazer?\n");
                 switch (terminal.Menu())
                 {
                     case 1: //lista
