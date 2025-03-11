@@ -29,5 +29,12 @@ namespace Cadastro_OOP
             } while (!teste || resposta < 1 || resposta > 3);
             return resposta;
         }
+
+        public void Espera()
+        {
+            Console.WriteLine("\nPreciosse 'Enter' para continuar");
+            Console.ReadLine();
+            Console.Clear();
+        }
     }
 }
