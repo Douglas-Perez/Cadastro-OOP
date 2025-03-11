@@ -20,6 +20,7 @@ namespace Cadastro_OOP
             do
             {
                 Console.WriteLine("1 -> Visualizar lista de alunos\n2 -> Cadastrar aluno novo\n3 -> sair\n");
+                Console.Clear();
                 teste = int.TryParse(Console.ReadLine(), out resposta);
                 if (!teste || resposta < 1 || resposta > 3)
                 {
