@@ -10,7 +10,23 @@ namespace Cadastro_OOP
     {
         public void MensagemErro()
         {
-            Console.WriteLine("Erro! valor inválido, tente novamente.");
+            Console.WriteLine("Erro! valor inválido, tente novamente.\n");
+        }
+
+        public int Menu()
+        {
+            bool teste;
+            int resposta;
+            do
+            {
+                Console.WriteLine("1 -> Visualizar lista de alunos\n2 -> Cadastrar aluno novo\n3 -> sair\n");
+                teste = int.TryParse(Console.ReadLine(), out resposta);
+                if (!teste || resposta < 1 || resposta > 3)
+                {
+                    MensagemErro();
+                }
+            } while (!teste || resposta < 1 || resposta > 3);
+            return resposta;
         }
     }
 }
