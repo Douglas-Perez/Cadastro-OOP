@@ -13,6 +13,18 @@
                 switch (terminal.Menu())
                 {
                     case 1: //lista
+                        if (alunos.Count == 0)
+                        {
+                            Console.WriteLine("Nenhum aluno cadastrado.");
+                        }
+                        if (alunos.Count > 0)
+                        {
+                            foreach (Aluno aluno in alunos)
+                            {
+                                aluno.Informacoes();
+                            }
+                        }
+                        terminal.Espera();
                         break;
                     case 2: //cadastrar
                         Console.WriteLine("Digite o nome do aluno");
