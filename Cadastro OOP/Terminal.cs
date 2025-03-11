@@ -32,7 +32,7 @@ namespace Cadastro_OOP
 
         public void Espera()
         {
-            Console.WriteLine("\nPreciosse 'Enter' para continuar");
+            Console.WriteLine("\nPressione ENTER para continuar");
             Console.ReadLine();
             Console.Clear();
         }
