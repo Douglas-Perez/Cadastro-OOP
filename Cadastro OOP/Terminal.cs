@@ -8,6 +8,9 @@ namespace Cadastro_OOP
 {
     class Terminal
     {
-
+        public void MensagemErro()
+        {
+            Console.WriteLine("Erro! valor inválido, tente novamente.");
+        }
     }
 }
