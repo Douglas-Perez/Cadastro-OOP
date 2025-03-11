@@ -21,9 +21,10 @@ namespace Cadastro_OOP
             Matricula = matricula;
         }
 
-        public string Informacoes()
+        public void Informacoes()
         {
-            return $"Nome: {Nome}\nE-mail: {Email}\nCurso: {Curso}\nNúmero da Matrícula: {Matricula}";
+            Console.WriteLine($"Nome: {Nome}\nE-mail: {Email}\nCurso: {Curso}\nNúmero da Matrícula: {Matricula}");
+            Console.WriteLine("----------------------------------------");
         }
     }
 }
