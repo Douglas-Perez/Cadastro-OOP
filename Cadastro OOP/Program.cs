@@ -38,6 +38,8 @@
                         alunos.Add(new Aluno(nome,email,curso,matricula));
                         break;
                     case 3: //sair
+                        Console.WriteLine("Obrigado por usar nosso sistema!");
+                        terminal.Espera();
                         return;
                 }
             }
