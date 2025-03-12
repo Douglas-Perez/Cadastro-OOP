@@ -31,6 +31,18 @@ namespace Cadastro_OOP
             }
             return email;
         }
+        public string Curso(string curso)
+        {
+            while (curso.Length == 0)
+            {
+                Console.Clear();
+                terminal.MensagemErro();
+                Console.WriteLine("Digite o curso do aluno");
+                curso = Console.ReadLine();
+            }
+            return curso;
+        }
+
     }
 }
 
