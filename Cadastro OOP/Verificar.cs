@@ -20,5 +20,17 @@ namespace Cadastro_OOP
             }
             return nome;
         }
+        public string Email(string email)
+        {
+            while (!email.Contains("@") || (!email.Contains(".com") && !email.Contains(".br")))
+            {
+                Console.Clear();
+                terminal.MensagemErro();
+                Console.WriteLine("Digite o email do aluno");
+                email = Console.ReadLine();
+            }
+            return email;
+        }
     }
 }
+
