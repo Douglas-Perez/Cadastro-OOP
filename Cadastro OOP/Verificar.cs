@@ -10,6 +10,7 @@ namespace Cadastro_OOP
     class Verificar
     {
         Terminal terminal = new();
+        TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
         public string Nome(string nome)
         {
             while (nome.Length == 0)
@@ -19,7 +20,7 @@ namespace Cadastro_OOP
                 Console.WriteLine("Digite o nome do aluno");
                 nome = Console.ReadLine();
             }
-            return nome;
+            return textInfo.ToTitleCase(nome.ToLower());
         }
         public string Email(string email)
         {
@@ -41,7 +42,7 @@ namespace Cadastro_OOP
                 Console.WriteLine("Digite o curso do aluno");
                 curso = Console.ReadLine();
             }
-            return curso;
+            return textInfo.ToTitleCase(curso.ToLower());
         }
 
     }
