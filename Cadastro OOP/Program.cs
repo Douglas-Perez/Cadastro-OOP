@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             Terminal terminal = new();
+            Verificar verificar = new();
             int matricula = 0;
             List<Aluno> alunos = new();
                 Console.WriteLine("Bem vindo ao nosso sistema de cadastro!");
@@ -29,13 +30,17 @@
                         break;
                     case 2: //cadastrar
                         Console.WriteLine("Digite o nome do aluno");
-                        string nome = Console.ReadLine();
+                        string nome = verificar.Nome(Console.ReadLine());
+
                         Console.WriteLine("Digite o E-mail do aluno");
-                        string email = Console.ReadLine();
+                        string email = verificar.Email(Console.ReadLine());
+                        
                         Console.WriteLine("Digite o Curso do aluno");
-                        string curso = Console.ReadLine();
+                        string curso = verificar.Curso(Console.ReadLine());
+                        
                         matricula++;
                         alunos.Add(new Aluno(nome,email,curso,matricula));
+                        terminal.Espera();
                         break;
                     case 3: //sair
                         Console.WriteLine("Obrigado por usar nosso sistema!");
