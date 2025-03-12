@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace Cadastro_OOP
     class Verificar
     {
         Terminal terminal = new();
+        TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
         public string Nome(string nome)
         {
             while (nome.Length == 0)
@@ -18,11 +20,11 @@ namespace Cadastro_OOP
                 Console.WriteLine("Digite o nome do aluno");
                 nome = Console.ReadLine();
             }
-            return nome;
+            return textInfo.ToTitleCase(nome.ToLower());
         }
         public string Email(string email)
         {
-            while (!email.Contains("@") || (!email.Contains(".com") && !email.Contains(".br")))
+            while (!email.Contains("@") || (!email.Contains(".com") && !email.Contains(".br") && !email.Contains(".edu")))
             {
                 Console.Clear();
                 terminal.MensagemErro();
@@ -40,7 +42,7 @@ namespace Cadastro_OOP
                 Console.WriteLine("Digite o curso do aluno");
                 curso = Console.ReadLine();
             }
-            return curso;
+            return textInfo.ToTitleCase(curso.ToLower());
         }
 
     }
