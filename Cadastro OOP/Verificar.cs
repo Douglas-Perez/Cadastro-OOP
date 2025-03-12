@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,7 @@ namespace Cadastro_OOP
         }
         public string Email(string email)
         {
-            while (!email.Contains("@") || (!email.Contains(".com") && !email.Contains(".br")))
+            while (!email.Contains("@") || (!email.Contains(".com") && !email.Contains(".br") && !email.Contains(".edu")))
             {
                 Console.Clear();
                 terminal.MensagemErro();
